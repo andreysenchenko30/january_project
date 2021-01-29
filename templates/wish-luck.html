@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+    <style>
+
+    #congratulation {
+        width: 50%;
+        min-height: 300px;
+        overflow: auto;
+        font-size: 16px;
+        font-family: Montserrat;
+
+    }
+
+    </style>
+    <form action="{% url 'add_congratulation' %}" method="POST">
+        {% csrf_token %}
+        <p class=pre-word>Напиши Антону что-нибудь приятное!</p>
+        <p>
+            <label class="field" for="congratulation"></label>
+        <p><textarea id="congratulation" name="congratulation" placeholder=""></textarea></p>
+        <p>
+            <button class="button1" type="submit"> Отправить!</button>
+        </p>
+    </form>
+{% endblock %}

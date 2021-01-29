@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+     <p>{% for congratulation in congratulations_list %}</p>
+     <p class = 'line'>{{ congratulation }}</p>
+    {% endfor %}
+{% endblock %}
+
